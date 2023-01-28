@@ -1,0 +1,194 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper]{awesome-cv}
+\usepackage{paracol}
+\usepackage{makecell}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+\renewcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\color{graytext} #1}}
+\renewcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+\photo{./profile_anon.png}
+\name{Jonathan}{Brouwer}
+\position{Software Engineer{\enskip\cdotp\enskip}Programming Language Researcher}
+
+\email{anon@gmail.com}
+\homepage{www.anon.nl}
+\github{Anon}
+\linkedin{anon}
+
+%\quote{``Be the change that you want to see in the world."}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader
+
+\makecvfooter
+  {\today}
+  {}
+  {}
+  
+\columnratio{0.25}
+\begin{paracol}{2}
+	\cvsection{About Me}
+	
+	\begin{cvparagraph}
+		I'm ambitious and have a passion for programming. In my free time I like playing chess, doing bouldering, and spending time on the water. 
+		
+		I grew up around [ANON], but moved to Delft for my studies. I will finish my master soon and I'm looking for a fun job to challenge me and to improve myself.
+	\end{cvparagraph}
+
+	\cvsection{Interests}
+	
+	\begin{cvparagraph}
+		\begin{description}[leftmargin=*]
+			\item[] \faRobot \hspace*{0.1cm} Robotics
+			\item[] \faHiking \hspace*{0.15cm} \, Hiking
+			\item[] \faGamepad \hspace*{0.1cm} Video Games
+			\item[] \faRunning \hspace*{0.20cm} Running
+		\end{description}
+	\end{cvparagraph}
+	
+	\cvsection{Languages}
+	
+	\begin{cvparagraph}
+		\begin{itemize}[leftmargin=*]
+			\item \textbf{Dutch} at Native level (C2)
+			\item \textbf{English} at Advanced level (C1)
+		\end{itemize}
+	\end{cvparagraph}
+
+	\cvsection{Contact}
+	
+	\begin{cvparagraph}
+		Feel free to send me an email if you have any further inquiries.
+	\end{cvparagraph}
+
+	
+	\switchcolumn
+	
+	\cvsection{Education}
+	\begin{cventries}
+		\shortcventry
+		{At Delft University Of Technology}
+		{Master in Computer Science}
+		{Graduating soon}
+		{Sep. 2021 - Mar. 2023}
+		
+		\cventry
+		{At Delft University Of Technology}
+		{Bachelor in Computer Science and Engineering}
+		{Average Grade of 9.1 (Cum Laude)}
+		{Sep. 2018 - Jul. 2021}
+		{\begin{cvitems}
+			\item Minor in Electronics for Robotics
+		\end{cvitems}}	
+	\end{cventries}
+	
+	\cvsection{Work Experience}
+	\begin{cventries}
+		\cventry
+		{At Delft University Of Technology}
+		{Teaching Assistant}
+		{Delft}
+		{May. 2022 - Present}
+		{
+			\begin{cvitems}
+				\item Independently created practical assignments for master courses from scratch
+				\item Helped students during practical sessions to understand the material
+				\item Taught about Rust, Embedded Systems, Compiler Construction, and more
+			\end{cvitems}
+		}
+		
+		\cventry
+		{At Lobster Robotics}
+		{Software Engineer}
+		{Delft}
+		{Dec. 2019 - Sep. 2021}
+		{
+			\begin{cvitems}
+				\item {Developed an Autonomous Underwater Vehicle (AUV) for ocean monitoring and surveys }
+				\item {Drivers written in C, control software written in Python 3}
+			\end{cvitems}
+		}
+	\end{cventries}
+
+	\cvsection{Knowledge and Experience}
+	
+	\setlength{\tabcolsep}{0pt}
+	\begin{tabular*}{\linewidth}{L{\linewidth / 2} L{\linewidth / 2}}
+	\paragraphstyle \makecell[l]{
+		\textbf{Programming languages} \\
+		\emph{Systems languages:} \faRust \, Rust, \faCopyright \, C, and C++ \\
+		\emph{OOP languages:} \faJava \, Java, Scala, \faPython \, Python, and C\# \\
+		\emph{Web:} \faHtml5 HTML, \, \faCss3 CSS, and \faJs \, JavaScript \\
+		\emph{Other:} \faDatabase \, SQL, JSON, OpenCL, \faMicrochip \, VHDL
+	} &
+	\paragraphstyle \makecell[l]{
+		\textbf{Development} \\
+		\emph{IDEs:} \faLaptopCode \, Jetbrains Products, VS Code \\
+		\emph{Version Control:} \faGit* Git, \faGithub \, GitHub, and \faGitlab \, GitLab \\
+		\emph{Communication:} \faPeopleArrows \, Experienced Scrum user \\
+		\emph{Operating Systems:} \faLinux \, Linux, \, \faWindows \, Windows \\
+	} \\
+	\end{tabular*}
+	
+	
+	
+	
+	
+	\cvsection{Algorithmic Competitions}
+	
+	\newenvironment{cvawards}{%
+		\vspace{\acvSectionContentTopSkip}
+		\vspace{-6mm}
+		\begin{center}
+			\setlength\tabcolsep{0pt}
+			\setlength{\extrarowheight}{0pt}
+			\begin{tabular*}{\textwidth}{L{\textwidth - 2.5cm} R{2.5cm}}
+			}{%
+			\end{tabular*}
+		\end{center}
+	}
+	\newcommand*{\cvaward}[3]{%
+		\honorpositionstyle{#1} \honortitlestyle{#2} & \honorlocationstyle{#3} \\
+	}
+	\begin{cvparagraph}
+		\textbf{I enjoy participating in programming competitions, these are my results at the international level:}
+	\end{cvparagraph}
+    \vspace*{-2mm}
+	\begin{cvawards}
+		\cvaward {42nd place} {at the Benelux Algorithmic Programming Contest 2019} {Nijmegen}
+		\cvaward {23rd place} {at the Benelux Algorithmic Programming Contest 2020} {Delft}  
+		\cvaward {22nd place} {at the Benelux Algorithmic Programming Contest 2021} {Amsterdam} 
+		\cvaward {17th place} {at the Benelux Algorithmic Programming Contest 2022} {Eindhoven} 
+	\end{cvawards}
+	
+\end{paracol}
+
+
+
+
+
+%-------------------------------------------------------------------------------
+\end{document}
