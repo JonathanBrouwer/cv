@@ -463,17 +463,17 @@
 		\headersocialstyle{%
 			\newbool{isstart}%
 			\setbool{isstart}{true}%
-			\ifthenelse{\isundefined{\@mobile}}%
-			{}%
-			{%
-				\href{tel:\@mobile}{\faMobile\acvHeaderIconSep\@mobile}%
-				\setbool{isstart}{false}%
-			}%
 			\ifthenelse{\isundefined{\@email}}%
 			{}%
 			{%
-				\ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
 				\href{mailto:\@email}{\faEnvelope\acvHeaderIconSep\@email}%
+				\setbool{isstart}{false}%
+			}%
+			\ifthenelse{\isundefined{\@mobile}}%
+			{}%
+			{%
+				\ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+				\href{tel:\@mobile}{\faPhone\acvHeaderIconSep\@mobile}%
 			}%
 			\ifthenelse{\isundefined{\@dateofbirth}}%
 			{}%
@@ -648,6 +648,19 @@
 		\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
 		\entrypositionstyle{#1} & \entrydatestyle{#4} \\
 		\multicolumn{2}{L{\linewidth}}{\descriptionstyle{#5}} 
+	\end{tabular*}
+}
+
+\newcommand*{\compactcventry}[5]{
+	\vspace{-2.0mm}
+	\setlength\tabcolsep{0pt}
+	\setlength{\extrarowheight}{0pt}
+	\begin{tabular*}{\linewidth}{L{\linewidth}}
+	\entrytitlestyle{#2} \\
+	\entrypositionstyle{#1} \\
+	\entrylocationstyle{#3} \\
+	\entrydatestyle{#4} \\
+	\descriptionstyle{#5} \\
 	\end{tabular*}
 }
 
