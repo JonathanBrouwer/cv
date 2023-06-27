@@ -651,6 +651,16 @@
 	\end{tabular*}
 }
 
+\newcommand*{\ultracompactcventry}[2]{
+	\vspace{-2.0mm}
+	\setlength\tabcolsep{0pt}
+	\setlength{\extrarowheight}{0pt}
+	\begin{tabular*}{\linewidth}{L{\linewidth}}
+		\entrytitlestyle{#1} \\
+		\descriptionstyle{#2} 
+	\end{tabular*}
+}
+
 \newcommand*{\compactcventry}[5]{
 	\vspace{-2.0mm}
 	\setlength\tabcolsep{0pt}
